@@ -9,6 +9,7 @@ namespace Assets.Script.Guards
         public GuardData GuardData;
         public MonoMovementHandler MovementHandler;
         public MonoMovementPattern MovementPattern;
+        public MonoDetectionSystem DetectionSystem;
         #endregion
 
         #region Unity Methods
