@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Assets.Script.Interface;
+﻿using Assets.Script.Interface;
+using Assets.Script.Suspicious;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Script.MonoBehaviourExtensions
 {
     public abstract class MonoDetectionSystem : MonoBehaviour, IDetectionSystem
     {
-        public abstract void AddListener(Action action);
+        /// <inheritdoc />
+        public abstract void AddListener(UnityAction<SuspiciousObject> action);
     }
 }

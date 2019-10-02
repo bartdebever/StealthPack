@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assets.Script.Suspicious;
+using UnityEngine.Events;
 
 namespace Assets.Script.Interface
 {
+    /// <summary>
+    /// A system that defines the detection of suspicious objects.
+    /// </summary>
     public interface IDetectionSystem
     {
-        void AddListener(Action action);
+        /// <summary>
+        /// Adds a listener to call when the system detects something suspicious.
+        /// </summary>
+        /// <param name="action">The action performed.</param>
+        void AddListener(UnityAction<SuspiciousObject> action);
     }
 }

@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using Assets.Script.Interface;
 using Assets.Script.MonoBehaviourExtensions;
 using UnityEngine;
 
-namespace Assets.Script.Basic
+namespace Assets.Script.Basics
 {
     /// <summary>
     /// Provides a very basic movement pattern easily implemented by provided
