@@ -10,9 +10,19 @@ namespace Assets.Script.Basics
     /// </summary>
     public class BasicMovementPattern : MonoMovementPattern
     {
+        /// <summary>
+        /// The points that the guard will move to.
+        /// </summary>
         public List<Vector3> Pattern;
+
+        /// <summary>
+        /// Defines if the Gizmos should draw where the guard is looking at.
+        /// </summary>
         public bool DrawGizmos;
 
+        /// <summary>
+        /// The current state in which the guard is within the array.
+        /// </summary>
         private int _currentState;
 
         /// <inheritdoc />
