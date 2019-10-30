@@ -1,7 +1,7 @@
 {
   "docs": {
-    "Installation": ["doc1"],
-    "Getting Started": ["doc2"],
+    "Getting Started": [
+      "install", "gettingstarted"],
     "In-depth look": ["quicksaving"]
   },
   "docs-other": {
