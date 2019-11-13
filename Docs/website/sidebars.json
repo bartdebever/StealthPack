@@ -2,7 +2,7 @@
   "docs": {
     "Getting Started": [
       "install", "gettingstarted"],
-    "In-depth look": ["quicksaving", "movement", "detection"]
+    "In-depth look": ["guard", "movement", "detection", "quicksaving"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
