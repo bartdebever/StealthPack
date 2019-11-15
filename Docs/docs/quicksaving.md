@@ -112,3 +112,50 @@ public class Quicksaver : MonoBehaviour
     }
 }
 ```
+
+## Saving and loading inherited scripts
+
+When inheriting from classes like `BasicStateMachine`, these classes will have
+already implemented the `ISaveableEntity` interface themselves.
+These implementations are virtual and can be overwritten.
+
+### UniqueId
+
+To set the unique ID to a unique value of some sorts, override the `Start()` method.
+
+```cs
+protected override void Start()
+{
+    base.Start();
+    UniqueId = GUID.Generate();
+    QuickSaveStorage.Get.AddScript(this);
+}
+```
+
+With `base.Start()` the method on the base class will called, this might be important
+if the method has other logic in it.
+
+### Save & Load
+
+The following is an example of the `CustomGuard` class in the test project.
+
+```cs
+public override Dictionary<string, object> Save()
+{
+    // Get the dictionary from the base class and expand on it.
+    var saveState = base.Save();
+    saveState.Add("position", gameObject.transform.position);
+    saveState.Add("target", _target);
+    saveState.Add("state", _state);
+    return saveState;
+}
+public override void Load(Dictionary<string, object> saveState)
+{
+    // Let the base class handle the loading for it's variables.
+    base.Load(saveState);
+    gameObject.transform.position = (Vector3) saveState["position"];
+    _target = (Vector3?) saveState["target"];
+    _state = (GuardModes) saveState["state"];
+    ToggleSearching();
+}
+```
