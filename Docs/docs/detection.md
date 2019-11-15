@@ -5,9 +5,9 @@ title: Detection
 
 This document talks about the ways to implement detection using the package.
 
-## BasicDetection
+## BasicTriggerDetection
 
-The `BasicDetection` uses a combination of triggers and a raycast to detect
+The `BasicTriggerDetection` uses a combination of triggers and a raycast to detect
 `SuspiciousObjects`.
 
 For this to work the trigger object should be a child of your script that implements
